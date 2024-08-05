@@ -11,8 +11,12 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
-Route::get('/project', function () {
+Route::get('/project/detail', function () {
     return view('project-screen');
+});
+
+Route::get('/project', function () {
+    return view('project-show');
 });
 
 Route::get('/partners-list', function () {
