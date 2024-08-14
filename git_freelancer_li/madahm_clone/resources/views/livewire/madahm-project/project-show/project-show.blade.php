@@ -1,90 +1,113 @@
 <div class="flex-all-center flex-col">
-    <div class="w-169 pb-40">
 
-        <section class="flex items-center justify-between">
-            <div class="flex items-center">
-                <p class="text-zinc-400">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">
-                            gun </font>
-                    </font><span class="text-zinc-700 font-bold">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">4,338 cases</font>
-                        </font>
-                    </span>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">
-                            Project
-                        </font>
-                    </font>
-                </p>
-                <div class="divide-line-m spacing"></div>
-                <div wire:ignore="" class="custom-select right-align placeholder-left">
-                    <select id="orderBy" name="orderBy" wire:model="orderBy" class="w-24 text-type p-none over-width"
-                        x-init="slimSelect('orderBy')" tabindex="-1" data-ssid="ss-67219" aria-hidden="true"
-                        style="display: none;">
-                        <option value="1">최신 등록 순</option>
+    <div class="flex-all-center w-full bg-gray-50">
+        <section id="fixedPadding" class="w-169 py-9 flex justify-between items-center">
+            <div class="flex">
 
-                        <option value="3">예산 높은 순</option>
-                        <option value="4">예산 낮은 순</option>
-                    </select>
-                    <div class="ss-67219 ss-main w-24 text-type p-none over-width" style="">
-                        <div class="ss-single-selected"><span class="placeholder">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Latest registration net</font>
-                                </font>
-                            </span><span class="ss-deselect ss-hide">x</span><span class="ss-arrow"><span
-                                    class="arrow-down"></span></span></div>
-                        <div class="ss-content">
-                            <div class="ss-search"><input type="search" placeholder="Search" tabindex="0"
-                                    aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off"></div>
-                            <div class="ss-list" role="listbox">
-                                <div class="ss-option ss-disabled ss-option-selected" role="option" data-id="54177446">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Latest registration net</font>
-                                    </font>
+
+                <label wire:ignore="" for="service" class="flex items-center w-48 pl-4 py-3 mr-3 bg-white">
+                    <p class="break-keep-all text-zinc-400">분야</p>
+                    <div class="divide-line-m spacing"></div>
+                    <div ref="select-box"></div>
+
+                    <div class="w-full custom-select right-align placeholder-left">
+                        <select class="w-full text-type p-none pr-4" id="service" name="service"
+                            wire:model="serviceParam" tabindex="-1" aria-hidden="true" style="display: none;">
+                            <option value="0">전체</option>
+                            <option value="1">통합마케팅</option>
+                            <option value="2">온라인광고</option>
+                            <option value="3">오프라인광고</option>
+                            <option value="4">CPA</option>
+                            <option value="5">영상제작</option>
+                            <option value="6">웹앱개발</option>
+                        </select>
+                        <!-- Element for displaying Slim Select -->
+                        <div class="ss-19055 ss-main w-full text-type p-none pr-4">
+                            <div class="ss-single-selected"><span class="placeholder">전체</span><span
+                                    class="ss-deselect ss-hide">x</span><span class="ss-arrow"><span
+                                        class="arrow-down"></span></span></div>
+                            <div class="ss-content">
+                                <div class="ss-search"><input type="search" placeholder="Search" tabindex="0"
+                                        aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off">
                                 </div>
-                                <div class="ss-option" role="option" data-id="51164646">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">High budget net</font>
-                                    </font>
-                                </div>
-                                <div class="ss-option" role="option" data-id="73062940">
-                                    <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Low budget net</font>
-                                    </font>
+                                <div class="ss-list" role="listbox">
+                                    <div class="ss-option ss-disabled ss-option-selected" role="option"
+                                        data-id="29999594">전체</div>
+                                    <div class="ss-option" role="option" data-id="24253526">통합마케팅</div>
+                                    <div class="ss-option" role="option" data-id="88923401">온라인광고</div>
+                                    <div class="ss-option" role="option" data-id="77440167">오프라인광고</div>
+                                    <div class="ss-option" role="option" data-id="40123787">CPA</div>
+                                    <div class="ss-option" role="option" data-id="13600331">영상제작</div>
+                                    <div class="ss-option" role="option" data-id="16869717">웹앱개발</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <ul class="slide-radio-list w-48 bg-custom bg-zinc-50 !my-5">
-                <input type="radio" class="radio-item1" id="projectStatus1" name="projectStatus" value="0"
-                    wire:model="stateParam">
-                <label class="slide-radio-item" for="projectStatus1">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">all</font>
-                    </font>
-                </label>
-                <input type="radio" class="radio-item2" id="projectStatus2" name="projectStatus" value="1"
-                    wire:model="stateParam">
-                <label class="slide-radio-item" for="projectStatus2">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Recruitment</font>
-                    </font>
-                </label>
-                <input type="radio" class="radio-item3" id="projectStatus3" name="projectStatus" value="2"
-                    wire:model="stateParam">
-                <label class="slide-radio-item" for="projectStatus3">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Selection</font>
-                    </font>
-                </label>
-                <span class="bg-slide-radio"></span>
-            </ul>
-        </section>
 
+                </label>
+
+
+                <label wire:ignore="" for="budget" class="flex items-center w-48 pl-4 py-3 mr-3 bg-white">
+                    <p class="break-keep-all text-zinc-400">예산</p>
+                    <div class="divide-line-m spacing"></div>
+                    <div class="w-full custom-select right-align placeholder-left">
+
+                        <select class="w-full text-type p-none pr-4" id="budget" name="budget"
+                            wire:model="budgetParam" x-init="slimSelect('budget')" tabindex="-1" data-ssid="ss-88678"
+                            aria-hidden="true" style="display: none;">
+                            <option value="0">전체</option>
+                            <option value="1">100만 이하</option>
+                            <option value="2">100 - 500만</option>
+                            <option value="3">500 - 1000만</option>
+                            <option value="4">1000 - 3000만</option>
+                            <option value="5">3000 - 5000만</option>
+                            <option value="6">5000 - 1억</option>
+                            <option value="7">1억 이상</option>
+                        </select>
+
+                        <div class="ss-88678 ss-main w-full text-type p-none pr-4" style="">
+
+                            <div class="ss-single-selected">
+                                <span class="placeholder">전체</span>
+                                <span class="ss-deselect ss-hide">x</span>
+                                <span class="ss-arrow"><span class="arrow-down"></span>
+                                </span>
+                            </div>
+                            <div class="ss-content">
+                                <div class="ss-search"><input type="search" placeholder="Search" tabindex="0"
+                                        aria-label="Search" autocapitalize="off" autocomplete="off"
+                                        autocorrect="off"></div>
+                                <div class="ss-list" role="listbox">
+                                    <div class="ss-option ss-disabled ss-option-selected" role="option"
+                                        data-id="13874756">전체</div>
+                                    <div class="ss-option" role="option" data-id="99696293">100만 이하</div>
+                                    <div class="ss-option" role="option" data-id="2872942">100 - 500만</div>
+                                    <div class="ss-option" role="option" data-id="82699992">500 - 1000만</div>
+                                    <div class="ss-option" role="option" data-id="96520818">1000 - 3000만</div>
+                                    <div class="ss-option" role="option" data-id="69997532">3000 - 5000만</div>
+                                    <div class="ss-option" role="option" data-id="357917">5000 - 1억</div>
+                                    <div class="ss-option" role="option" data-id="73866606">1억 이상</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+            <div>
+                <label for="" class="relative flex items-center px-4 py-3 w-75 rounded-full bg-white">
+                    <input type="text" class="w-60 outline-none" placeholder="프로젝트 검색"
+                        wire:keydown.enter="searchEvent" wire:model.defer="search">
+                    <button class="absolute p-4 right-0 cursor-pointer" type="button" wire:click="searchEvent">
+                        <span class="flex icon-search-zinc-500 w-5 h-5"></span>
+                    </button>
+                </label>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="w-169 pb-40">
         <section class="project-list pb-10 custom-type">
             <a
                 href="/project/detail/7245?page=1&amp;orderBy=1&amp;stateParam=0&amp;serviceParam=0&amp;budgetParam=0&amp;search=">
